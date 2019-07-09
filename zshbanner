@@ -1,0 +1,5 @@
+#!/bin/bash
+
+artii "Welcome Akhil" | lolcat
+fortune | cowsay | lolcat
+echo ""
