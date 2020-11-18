@@ -1,38 +1,48 @@
-# Install brew
+ Only for MAC
 
+install iterm2
 ```
+https://iterm2.com/downloads.html
+```
+
+install homebrew
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 https://brew.sh/
 ```
 
-# Install iterm2
-
+install oh-my-zsh
 ```
-https://www.iterm2.com/
-```
-
-# Install oh-my-zsh
-
-```
-https://github.com/robbyrussell/oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+https://github.com/ohmyzsh/ohmyzsh
 ```
 
+install powerline9k
 ```
-sudo chown -R $(whoami) /usr/local/Cellar
-sudo chown -R $(whoami) /usr/local/Homebrew
-sudo chown -R $(whoami) /usr/local/var/homebrew
+brew tap sambadevi/powerlevel9k
+brew install powerlevel9k
+sudo   echo "source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+vim ~/.zshrc,  change theme to ZSH_THEME="powerlevel9k/powerlevel9k"
+```
 
-sudo chown -R $(whoami) /usr/local/bin /usr/local/etc /usr/local/etc/bash_completion.d /usr/local/include /usr/local/lib /usr/local/lib/pkgconfig /usr/local/lib/python3.7/site-packages /usr/local/opt /usr/local/share /usr/local/share/aclocal /usr/local/share/doc /usr/local/share/info /usr/local/share/locale /usr/local/share/man /usr/local/share/man/man1 /usr/local/share/man/man3 /usr/local/share/man/man5 /usr/local/share/man/man7 /usr/local/share/zsh /usr/local/share/zsh/site-functions /usr/local/var/log
-chmod u+w /usr/local/bin /usr/local/etc /usr/local/etc/bash_completion.d /usr/local/include /usr/local/lib /usr/local/lib/pkgconfig /usr/local/lib/python3.7/site-packages /usr/local/opt /usr/local/share /usr/local/share/aclocal /usr/local/share/doc /usr/local/share/info /usr/local/share/locale /usr/local/share/man /usr/local/share/man/man1 /usr/local/share/man/man3 /usr/local/share/man/man5 /usr/local/share/man/man7 /usr/local/share/zsh /usr/local/share/zsh/site-functions /usr/local/var/log
+install powerline fonts
+```
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..; rm -rf fonts
 
+iterm preferances => profiles => Text => Font (Source code pro for powerlevel9k)
+iterm preferances => profiles => Text => color presets (Solarized Dark)
+```
 
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-Then edit your ~/.zshrc and set ZSH_THEME="powerlevel10k/powerlevel10k".
-
-
-https://gist.github.com/kevin-smets/8568070
-
-iterm-> preferances -> profile -> Text -> change font
-iterm -> preferances -> Colors -> color presets
-
+material design
+```
 https://github.com/MartinSeeler/iterm2-material-design
+download
+iTerm2 > Preferences > Profiles > Colors Tab
+Click Color Presets...
+Click Import...
+Select the material-design-colors.itermcolors file
 ```
