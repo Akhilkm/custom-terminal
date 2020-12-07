@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Choose the AWS account below..."
+echo "1. option1"
+echo "2. option2"
+echo "3. option3"
+
+echo -n "Enter the option: "
+read option
+
+if [[ $option = 1 ]]; then
+    cp ~/.aws/option1 ~/.aws/credentials
+elif [[ $option = 2 ]]; then
+    cp ~/.aws/option2 ~/.aws/credentials
+elif [[ $option = 3 ]]; then
+    cp ~/.aws/option3 ~/.aws/credentials
+else
+	echo "Wrong option!!! nothing changed..."
+    exit 0
+fi
+
+echo "AWS credentials are changed."
